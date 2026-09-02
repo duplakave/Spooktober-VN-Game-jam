@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4k62ffq45346"]
+
+[ext_resource type="Script" uid="uid://dfsusn78xck3p" path="res://Scripts/main_script.gd" id="1_diu0u"]
+[ext_resource type="PackedScene" uid="uid://ohye08up66mf" path="res://Schenes/Dialog_ui.tscn" id="2_isoak"]
+
+[node name="A" type="Node2D"]
+script = ExtResource("1_diu0u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dialog_UI" parent="CanvasLayer" instance=ExtResource("2_isoak")]
+unique_name_in_owner = true
