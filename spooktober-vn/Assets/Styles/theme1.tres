@@ -1,7 +1,0 @@
-[gd_resource type="Theme" format=3 uid="uid://clo4hl8ukik1i"]
-
-[resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 32
