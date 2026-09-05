@@ -1,0 +1,27 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://8igdkjvrik33"]
+
+[ext_resource type="Texture2D" uid="uid://66txx8ufgled" path="res://Assets/Sprites/split_mouth_woman/idle/2Idle2.png" id="1_dhwty"]
+[ext_resource type="Texture2D" uid="uid://djlvjpsdt1xcq" path="res://Assets/Sprites/split_mouth_woman/talking/2Talking1.webp" id="2_bdays"]
+[ext_resource type="Texture2D" uid="uid://58ihcpptcetw" path="res://Assets/Sprites/split_mouth_woman/talking/2Talking2.webp" id="3_5db53"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dhwty")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bdays")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5db53")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]

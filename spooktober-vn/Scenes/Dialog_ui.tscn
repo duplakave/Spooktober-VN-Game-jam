@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=3 uid="uid://ohye08up66mf"]
+
+[ext_resource type="Script" uid="uid://df63vboomqhgc" path="res://Scripts/dialog_ui.gd" id="1_mmvjl"]
+[ext_resource type="Script" uid="uid://dkwx7cbn3wl7l" path="res://Scripts/text_blip.gd" id="2_es8l1"]
+[ext_resource type="PackedScene" uid="uid://cnnucujbc652q" path="res://Scenes/Player_choice.tscn" id="2_n81l5"]
+
+[node name="Dialog_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mmvjl")
+
+[node name="SentencePauseTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.35
+one_shot = true
+
+[node name="BlipTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.09
+
+[node name="TextBlip" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_es8l1")
+
+[node name="ChoiceContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -89.0
+offset_right = 300.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="ChoiceContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="button" parent="ChoiceContainer/ChoiceList" instance=ExtResource("2_n81l5")]
+visible = false
+layout_mode = 2
+
+[node name="Text_box" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -191.0
+offset_right = -339.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="dialog_lines" type="RichTextLabel" parent="Text_box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "The things characters say should be here.
+"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Name_box" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -263.0
+offset_right = 173.0
+offset_bottom = -196.0
+grow_vertical = 0
+
+[node name="speaker_name" type="Label" parent="Name_box"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -65.0
+offset_right = -60.0
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="polygon2D" type="Polygon2D" parent="Control"]
+position = Vector2(-319, -2)
+polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)

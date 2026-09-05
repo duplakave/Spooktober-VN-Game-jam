@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bks7simm2o3qh"]
+
+[ext_resource type="Texture2D" uid="uid://bvm5lsvl2fox0" path="res://Assets/Sprites/cashier_girl/idle/Idle1.png" id="1_7whpb"]
+[ext_resource type="Texture2D" uid="uid://cugb8tkdnecn" path="res://Assets/Sprites/cashier_girl/idle/Idle2.webp" id="2_um5m1"]
+[ext_resource type="Texture2D" uid="uid://deg2bhnrlst7v" path="res://Assets/Sprites/cashier_girl/talking/Talking1.webp" id="3_a27g6"]
+[ext_resource type="Texture2D" uid="uid://evvkmtlwsupw" path="res://Assets/Sprites/cashier_girl/talking/Talking2.png" id="4_rb82t"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7whpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7whpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_um5m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_um5m1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a27g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rb82t")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]

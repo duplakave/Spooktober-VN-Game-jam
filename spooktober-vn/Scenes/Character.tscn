@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://lvgrvy8idneu"]
+
+[ext_resource type="Script" uid="uid://cn7touipcj4ad" path="res://Scripts/character_sprite.gd" id="1_5kk1k"]
+[ext_resource type="SpriteFrames" uid="uid://8igdkjvrik33" path="res://Assets/Characters/split_mouth_woman.tres" id="2_jo2ib"]
+
+[node name="CharacterSprite" type="Node2D"]
+script = ExtResource("1_5kk1k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(596, 322)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_jo2ib")
+animation = &"talking"
+frame = 1
+frame_progress = 0.708845
